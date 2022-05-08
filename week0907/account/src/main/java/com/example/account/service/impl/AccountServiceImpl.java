@@ -20,7 +20,7 @@ public class AccountServiceImpl implements AccountService {
     @HmilyTCC(confirmMethod = "confirm", cancelMethod = "cancel")
     public boolean pay(Account account) {
         boolean isSuccess = accountMapper.payment(account);
-        log.info("py account : + " + account.getId() + " try result: " + isSuccess);
+        log.info("py  account : + " + account.getId() + " try result: " + isSuccess);
         log.info("py account : + " + account.getId() + " try data: " + accountMapper.queryOne(account));
         return isSuccess;
     }
